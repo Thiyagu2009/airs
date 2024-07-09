@@ -69,7 +69,8 @@ def main():
             # Create a pie chart
             sentiment_data = {"Sentiment": sentiments, "Count": sentiment_counts}
             sentiment_df = pd.DataFrame(sentiment_data)
-            fig = px.pie(sentiment_df, names='Sentiment', values='Count', title='Sentiment Distribution')
+            colors = {'positive': 'lightgreen', 'negative': 'lightcoral'}
+            fig = px.pie(sentiment_df, names='Sentiment', values='Count', title='Sentiment Distribution', color='Sentiment', color_discrete_map=colors)
             st.plotly_chart(fig)
 
         st.subheader("User Happiness")
