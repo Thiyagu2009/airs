@@ -1,0 +1,7 @@
+fastapi 
+uvicorn 
+SQLAlchemy 
+sqlite4
+streamlit 
+pandas 
+matplotlib
